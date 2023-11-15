@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="mainPanel" prefHeight="576.0" prefWidth="824.0"
+            style="-fx-background-color: #303841;" xmlns="http://javafx.com/javafx/19"
+            fx:controller="com.example.jasper.controller.MainFormController">
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="23.0" prefHeight="62.0" prefWidth="655.0"
+                    style="-fx-background-color: #F4F9F9; -fx-background-radius: 20px;">
+            <children>
+                <Label layoutX="35.0" layoutY="8.0" prefHeight="44.0" prefWidth="363.0" text="Reporting by Jasper Tool">
+                    <font>
+                        <Font size="29.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="childPanel" layoutX="11.0" layoutY="109.0" prefHeight="455.0" prefWidth="804.0"
+                    style="-fx-background-color: white; -fx-background-radius: 50px;">
+            <children>
+                <Label layoutX="37.0" layoutY="20.0" prefHeight="44.0" prefWidth="363.0" text="Customer">
+                    <font>
+                        <Font size="25.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="31.0" layoutY="160.0" text="ID : ">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Separator layoutX="37.0" layoutY="65.0" prefHeight="3.0" prefWidth="744.0"/>
+                <Label layoutX="31.0" layoutY="220.0" text="Title :">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="31.0" layoutY="278.0" text="Name : ">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <DatePicker fx:id="cmbDob" layoutX="169.0" layoutY="332.0" prefHeight="37.0" prefWidth="222.0"
+                            promptText="Select date" style="-fx-background-color: #F1F6F9;"/>
+                <Label layoutX="29.0" layoutY="338.0" text="Date of birth: ">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="426.0" layoutY="163.0" text="Address :">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="427.0" layoutY="221.0" text="City :">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="426.0" layoutY="279.0" text="Province :">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="420.0" layoutY="338.0" text="Postal Code:">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Label>
+                <JFXButton fx:id="btnSave" layoutX="662.0" layoutY="389.0" onAction="#btnSaveOnAction" prefHeight="37.0"
+                           prefWidth="113.0"
+                           style="-fx-background-color: #2185D5; -fx-padding: 10px; -fx-background-radius: 15px;"
+                           text="Save" textFill="WHITE"/>
+                <TextField fx:id="txtId" layoutX="169.0" layoutY="154.0" prefHeight="37.0" prefWidth="222.0"
+                           promptText="C001"/>
+                <TextField fx:id="txtName" layoutX="169.0" layoutY="272.0" prefHeight="37.0" prefWidth="222.0"
+                           promptText="Lakshan Chamoditha Perera"/>
+                <TextField fx:id="txtTitle" layoutX="169.0" layoutY="214.0" prefHeight="37.0" prefWidth="222.0"
+                           promptText="Mr"/>
+                <TextField fx:id="txtAddress" layoutX="551.0" layoutY="155.0" prefHeight="37.0" prefWidth="222.0"
+                           promptText="No. 45/2 "/>
+                <TextField fx:id="txtProvince" layoutX="551.0" layoutY="273.0" prefHeight="37.0" prefWidth="222.0"
+                           promptText="Western"/>
+                <TextField fx:id="txtCity" layoutX="551.0" layoutY="215.0" prefHeight="37.0" prefWidth="222.0"
+                           promptText="Panadura"/>
+                <TextField fx:id="txtPostalCode" layoutX="551.0" layoutY="332.0" prefHeight="37.0" prefWidth="222.0"
+                           promptText="12500"/>
+                <TextField fx:id="txtSearch" layoutX="400.0" layoutY="75.0" onAction="#txtSearchOnAction"
+                           prefHeight="37.0" prefWidth="373.0" promptText="Search"/>
+                <JFXButton buttonType="RAISED" layoutX="526.0" layoutY="390.0" onAction="#customerButtonOnAction"
+                           prefHeight="37.0" prefWidth="113.0"
+                           style="-fx-background-color: #9DB2BF; -fx-background-radius: 15px;" text="Reports"
+                           textFill="WHITE"/>
+            </children>
+        </AnchorPane>
+        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="739.0" layoutY="23.0"
+                   onAction="#homeBtnOnAction" prefHeight="62.0" prefWidth="57.0" ripplerFill="BLACK"
+                   style="-fx-background-color: white; -fx-background-radius: 100px;" text=" " textAlignment="CENTER">
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/home-button.png"/>
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </JFXButton>
+    </children>
+</AnchorPane>
