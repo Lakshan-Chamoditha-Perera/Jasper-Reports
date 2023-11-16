@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4376481b-0f7e-4e66-b9a5-beb1c7af1389" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/jasper/report/CustomerList2.jrxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jasper/controller/MainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/jasper/controller/MainFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/jasper/view/MainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/jasper/view/MainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jasper/controller/CustomerReportsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/jasper/controller/CustomerReportsFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/jasper/controller/CustomerReportsFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/jasper/controller/CustomerReportsFormController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/shan/Desktop/New Folder",
+    "last_opened_file_path": "/home/shan/Desktop/Jasper/src/main/resources/com/example/jasper/report",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,8 +60,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/com/example/jasper/assets" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/jasper/report" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/jasper/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -125,7 +125,7 @@
       <workItem from="1700044005630" duration="3128000" />
       <workItem from="1700105512251" duration="1021000" />
       <workItem from="1700113914577" duration="1207000" />
-      <workItem from="1700120672875" duration="3251000" />
+      <workItem from="1700120672875" duration="5615000" />
     </task>
     <servers />
   </component>
