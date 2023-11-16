@@ -1,5 +1,6 @@
 package com.example.jasper.controller;
 
+import com.example.jasper.db.DbConnection;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,8 +9,14 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
 import java.util.regex.Pattern;
 
 public class MainFormController {
@@ -58,11 +65,35 @@ public class MainFormController {
         childPanel.getChildren().add(FXMLLoader.load(getClass().getResource("../view/CustomerReportsForm.fxml")));
     }
 
-    public void btnSaveOnAction(ActionEvent actionEvent) {
+    public void btnSaveOnAction(ActionEvent actionEvent) throws JRException {
         boolean isCustomerValidated = validateCustomer();
         if (isCustomerValidated) {
             new Alert(Alert.AlertType.INFORMATION, "Customer Saved Successfully!").show();
+            printCustomer();
         }
+    }
+
+    private void printCustomer() throws JRException {
+        HashMap map = new HashMap();
+        map.put("custId", txtId.getText());
+        map.put("custTitle", txtTitle.getText());
+        map.put("custName", txtName.getText());
+        map.put("custAddress", txtAddress.getText());
+        map.put("custCity", txtCity.getText());
+        map.put("custPostalCode", txtProvince.getText());
+
+        InputStream resourceAsStream = getClass().getResourceAsStream("../report/CustomerDetail.jrxml");
+        JasperDesign load = JRXmlLoader.load(resourceAsStream);
+        JasperReport jasperReport = JasperCompileManager.compileReport(load);
+
+        JasperPrint jasperPrint =
+                JasperFillManager.fillReport(
+                        jasperReport, //compiled report
+                        map,
+                       new JREmptyDataSource() //database connection
+                );
+
+        JasperViewer.viewReport(jasperPrint, false);
     }
 
     private boolean validateCustomer() {
