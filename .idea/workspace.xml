@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4376481b-0f7e-4e66-b9a5-beb1c7af1389" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/jasper/report/CustomerDetail.jrxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jasper/controller/MainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/jasper/controller/MainFormController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +122,7 @@
       <workItem from="1700044005630" duration="3128000" />
       <workItem from="1700105512251" duration="1021000" />
       <workItem from="1700113914577" duration="1207000" />
-      <workItem from="1700120672875" duration="6942000" />
+      <workItem from="1700120672875" duration="7770000" />
     </task>
     <servers />
   </component>
